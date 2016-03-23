@@ -1,0 +1,68 @@
+{
+	"contents": {
+		"author": "Nelson222",
+		"name": "test message",
+		"version": "1.0",
+		"shiftable":[{
+				"team": "NNN",
+				"before": "07:00"
+			}, {
+				"team": "AAA",
+				"before": "15:00"
+			}, {
+				"team": "BBB",
+				"before": "20:00"
+			}, {
+				"team": "CCC",
+				"before": "24:00"
+			}],		
+		"object": [{
+				"type": "text",
+				"font": "fantasy",
+				"size": "30px",
+				"angle": "90deg",
+				"x": 329,
+				"y": 89,
+				"format": "= Anser ="
+			}, {
+				"type": "text",
+				"font": "New Roams",
+				"size": "14px",
+				"angle": "90deg",
+				"x": 104,
+				"y": 109,
+				"format": "We know jet!"
+			}, {
+				"type": "datetime",
+				"font": "serif",
+				"size": "20px",
+				"angle": "0deg",				
+				"x": 198,
+				"y": 41,
+				"format": "produce: %monthn/%day (%week) %hh:%mm:%ss"
+			}, {
+				"type": "expire",
+				"font": "georgia",
+				"size": "18px",
+				"angle": "0deg",
+				"x": 223,
+				"y": 140,
+				"format": "EXP: %year/%monthx/%day",
+				"days": 10
+			}, {
+				"type": "counter",
+				"font": "arial",
+				"size": "30px",
+				"angle": "0deg",
+				"x": 128,
+				"y": 134,
+				"format": 0,
+				"min": -5,
+				"max": 20,
+				"step": 5,
+				"flyback": "true"
+			}
+		],
+		"AttendeeEmail": "rd@anser-u2.com"
+	}
+}

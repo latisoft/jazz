@@ -1,0 +1,47 @@
+{
+	"contents": {
+		"author": "Nelson222",
+		"name": "test message",
+		"version": "1.0",
+		"shiftable":[{
+				"team": "NNN",
+				"before": "07:00"
+			}, {
+				"team": "AAA",
+				"before": "15:00"
+			}, {
+				"team": "BBB",
+				"before": "20:00"
+			}, {
+				"team": "CCC",
+				"before": "24:00"
+			}],		
+		"object": [{
+				"type": "counter",
+				"font": "arial",
+				"size": "24px",
+				"angle": "0deg",
+				"x": 10,
+				"y": 90,
+				"format": 1700,
+				"min": -5,
+				"max": 20,
+				"step": 5,
+				"flyback": "true"
+			}, {
+				"type": "barcode",
+				"bctype": "datamatrix",
+				"bcoption": "width=1.4 height=1.4",
+				"width": "1",
+				"height": "50",
+				"angle": "0deg",
+				"x": 110,
+				"y": 90,
+				"cntList":[],
+				"format": "This is Data Matrix!",
+				"showtext": "false"				
+			}
+		],
+		"AttendeeEmail": "rd@anser-u2.com"
+	}
+}

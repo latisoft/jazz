@@ -1,0 +1,102 @@
+{
+	"contents": {
+		"author": "Nelson222",
+		"name": "test message",
+		"version": "1.0",
+		"shiftable":[{
+				"team": "NNN",
+				"before": "07:00"
+			}, {
+				"team": "AAA",
+				"before": "15:00"
+			}, {
+				"team": "BBB",
+				"before": "20:00"
+			}, {
+				"team": "CCC",
+				"before": "24:00"
+			}],		
+		"object": [{
+				"type": "text",
+				"font": "arial",
+				"size": "36px",
+				"angle": "90deg",
+				"x": 420,
+				"y": 97,
+				"format": "= Anser ="
+			}, {
+				"type": "text",
+				"font": "arial",
+				"size": "28px",
+				"angle": "90deg",
+				"x": 473,
+				"y": 97,
+				"format": "We know jet!"
+			}, {
+				"type": "datetime",
+				"font": "arial",
+				"size": "18px",
+				"angle": "0deg",				
+				"x": 110,
+				"y": 20,
+				"format": "produce: %monthn/%day (%week) %hh:%mm:%ss"
+			}, {
+				"type": "expire",
+				"font": "georgia",
+				"size": "18px",
+				"angle": "0deg",
+				"x": 110,
+				"y": 60,
+				"format": "EXP: %year/%monthx/%day",
+				"days": 10
+			}, {
+				"type": "counter",
+				"font": "arial",
+				"size": "22px",
+				"angle": "0deg",
+				"x": 260,
+				"y": 182,
+				"format": 0,
+				"min": -5,
+				"max": 20,
+				"step": 5,
+				"flyback": "true"
+			}, {
+				"type": "barcode",
+				"bctype": "ean13",
+				"bcoption": "includetext guardwhitespace",
+				"width": "1",
+				"height": "50",
+				"angle": "0deg",
+				"x": 330,
+				"y": 110,
+				"cntList":[{
+						"value": 4,
+						"min": 0,
+						"max": 999,
+						"step": 1
+					},{
+						"value": 4,
+						"min": 0,
+						"max": 999,
+						"step": 1				
+					}],
+				"format": "2071473968010",
+				"showtext": "false"	
+			}, {
+				"type": "barcode",
+				"bctype": "ean8",
+				"bcoption": "includetext guardwhitespace height=0.5",
+				"width": "1",
+				"height": "50",
+				"angle": "0deg",
+				"x": 110,
+				"y": 150,
+				"cntList":[],
+				"format": "228221689205",
+				"showtext": "true"
+			}
+		],
+		"AttendeeEmail": "rd@anser-u2.com"
+	}
+}

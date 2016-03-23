@@ -1,0 +1,102 @@
+{
+	"contents": {
+		"author": "Nelson222",
+		"name": "test message",
+		"version": "1.0",
+		"shiftable":[{
+				"team": "NNN",
+				"before": "07:00"
+			}, {
+				"team": "AAA",
+				"before": "15:00"
+			}, {
+				"team": "BBB",
+				"before": "20:00"
+			}, {
+				"team": "CCC",
+				"before": "24:00"
+			}],		
+		"object": [{
+				"type": "text",
+				"font": "fantasy",
+				"size": "30px",
+				"angle": "90deg",
+				"x": 414,
+				"y": 116,
+				"format": "{Taiwan}"
+			}, {
+				"type": "text",
+				"font": "New Roams",
+				"size": "16px",
+				"angle": "90deg",
+				"x": 452,
+				"y": 90,
+				"format": "Help people living better!"
+			}, {
+				"type": "datetime",
+				"font": "serif",
+				"size": "20px",
+				"angle": "0deg",				
+				"x": 269,
+				"y": 34,
+				"format": "produce: %monthn/%day (%week) %hh:%mm:%ss"
+			}, {
+				"type": "expire",
+				"font": "georgia",
+				"size": "18px",
+				"angle": "0deg",
+				"x": 248,
+				"y": 67,
+				"format": "EXP: %year/%monthx/%day",
+				"days": 10
+			}, {
+				"type": "counter",
+				"font": "arial",
+				"size": "30px",
+				"angle": "0deg",
+				"x": 405,
+				"y": 24,
+				"format": 8,
+				"min": -5,
+				"max": 20,
+				"step": 5,
+				"flyback": "true"
+			}, {
+				"type": "barcode",
+				"bctype": "qrcode",
+				"bcoption": "eclevel=M width=1.2 height=1.2",
+				"width": "1",
+				"height": "50",
+				"angle": "0deg",
+				"x": 208,
+				"y": 134,
+				"cntList":[],
+				"format": "http://www.anser-u2.com/",
+				"showtext": "false"		
+			}, {
+				"type": "barcode",
+				"bctype": "ean13",
+				"bcoption": "includetext guardwhitespace",
+				"width": "1",
+				"height": "50",
+				"angle": "0deg",
+				"x": 326,
+				"y": 137,
+				"cntList":[{
+						"value": 4,
+						"min": 0,
+						"max": 999,
+						"step": 1
+					},{
+						"value": 4,
+						"min": 0,
+						"max": 999,
+						"step": 1				
+					}],
+				"format": "2071473968010",
+				"showtext": "false"		
+			}
+		],
+		"AttendeeEmail": "rd@anser-u2.com"
+	}
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<contents>
+	<name>test message</name>
+	<version>1.0</version>
+	<AttendeeEmail>rd@anser-u2.com</AttendeeEmail>
+
+	<object id="01" type="Text" position="15,6">
+		<value>Message 0001</value>
+		<font>default</font>
+		<size>12</size>
+	</object>
+	
+	
+
+
+</contents>
+
+
+
+

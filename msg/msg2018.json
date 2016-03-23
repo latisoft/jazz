@@ -1,0 +1,125 @@
+{
+	"contents": {
+		"author": "Nelson222",
+		"name": "test message",
+		"version": "1.0",
+		"shiftable": [
+			{
+				"team": "NNN",
+				"before": "07:00"
+			},
+			{
+				"team": "AAA",
+				"before": "15:00"
+			},
+			{
+				"team": "BBB",
+				"before": "20:00"
+			},
+			{
+				"team": "CCC",
+				"before": "24:00"
+			}
+		],
+		"object": [
+			{
+				"type": "text",
+				"version": 1,
+				"font": "fantasy",
+				"size": "30px",
+				"angle": "90deg",
+				"x": 450,
+				"y": 85.5,
+				"format": "|||ANSER|||"
+			},
+			{
+				"type": "text",
+				"version": 1,
+				"font": "New Roams",
+				"size": "14px",
+				"angle": "90deg",
+				"x": 125,
+				"y": 80,
+				"format": "Do you remember?"
+			},
+			{
+				"type": "datetime",
+				"version": 1,
+				"font": "serif",
+				"size": "20px",
+				"angle": "0deg",
+				"x": 309.5,
+				"y": 26,
+				"format": "produce: %monthn/%day (%week) %hh:%mm:%ss",
+				"days": 0
+			},
+			{
+				"type": "expire",
+				"version": 1,
+				"font": "georgia",
+				"size": "18px",
+				"angle": "0deg",
+				"x": 302,
+				"y": 152.5,
+				"format": "EXP: %year/%monthx/%day",
+				"days": 10
+			},
+			{
+				"type": "counter",
+				"version": 1,
+				"font": "arial",
+				"size": "30px",
+				"angle": "0deg",
+				"x": 150.5,
+				"y": 118,
+				"format": 0,
+				"min": -5,
+				"max": 20,
+				"step": 5,
+				"flyback": "true"
+			},
+			{
+				"type": "barcode",
+				"version": 1,
+				"bctype": "qrcode",
+				"bcoption": "eclevel=M width=1.2 height=1.2",
+				"width": "1",
+				"height": "50",
+				"angle": "0deg",
+				"x": 247.5,
+				"y": 86.5,
+				"showtext": "false",
+				"cntList": [],
+				"format": "http://www.anser-u2.com/"
+			},
+			{
+				"type": "barcode",
+				"version": 1,
+				"bctype": "ean13",
+				"bcoption": "includetext guardwhitespace",
+				"width": "2",
+				"height": "50",
+				"angle": "0deg",
+				"x": 360,
+				"y": 82.5,
+				"showtext": "false",
+				"cntList": [
+					{
+						"value": 4,
+						"min": 0,
+						"max": 999,
+						"step": 1
+					},
+					{
+						"value": 4,
+						"min": 0,
+						"max": 999,
+						"step": 1
+					}
+				],
+				"format": "2071473968010"
+			}
+		],
+		"AttendeeEmail": "rd@anser-u2.com"
+	}
+}

@@ -1,0 +1,171 @@
+{
+	"contents": {
+		"author": "Nelson222",
+		"name": "test message",
+		"version": "1.0",
+		"shiftable": [
+			{
+				"team": "NNN",
+				"before": "07:00"
+			},
+			{
+				"team": "AAA",
+				"before": "15:00"
+			},
+			{
+				"team": "BBB",
+				"before": "20:00"
+			},
+			{
+				"team": "CCC",
+				"before": "24:00"
+			}
+		],
+		"object": [
+			{
+				"type": "text",
+				"version": 1,
+				"font": "fantasy",
+				"size": "30px",
+				"angle": "90deg",
+				"x": 70,
+				"y": 102.5,
+				"format": "Good Morning"
+			},
+			{
+				"type": "text",
+				"version": 1,
+				"font": "New Roams",
+				"size": "14px",
+				"angle": "90deg",
+				"x": 31,
+				"y": 43,
+				"format": "World!"
+			},
+			{
+				"type": "datetime",
+				"version": 1,
+				"font": "serif",
+				"size": "20px",
+				"angle": "90deg",
+				"x": 150.5,
+				"y": 109,
+				"format": "produce: %monthn/%day (%week) %hh:%mm:%ss",
+				"days": 0
+			},
+			{
+				"type": "expire",
+				"version": 1,
+				"font": "georgia",
+				"size": "18px",
+				"angle": "0deg",
+				"x": 267,
+				"y": 170.5,
+				"format": "EXP: %year/%monthx/%day",
+				"days": 10
+			},
+			{
+				"type": "counter",
+				"version": 1,
+				"font": "arial",
+				"size": "30px",
+				"angle": "0deg",
+				"x": 30.5,
+				"y": 119,
+				"format": 0,
+				"min": -5,
+				"max": 20,
+				"step": 5,
+				"flyback": "true"
+			},
+			{
+				"type": "counter",
+				"version": 1,
+				"font": "gothic",
+				"size": "24px",
+				"angle": "270deg",
+				"x": 215,
+				"y": 113.5,
+				"format": 0,
+				"min": 0,
+				"max": 99999999,
+				"step": 1,
+				"flyback": "true"
+			},
+			{
+				"type": "text",
+				"version": 1,
+				"font": "sans-serif",
+				"size": "28px",
+				"angle": "0deg",
+				"x": 262,
+				"y": 69,
+				"format": "TEXT2"
+			},
+			{
+				"type": "barcode",
+				"version": 1,
+				"bctype": "ean8",
+				"bcoption": "includetext guardwhitespace height=0.5",
+				"width": "1",
+				"height": "50",
+				"angle": "0deg",
+				"x": 493,
+				"y": 107.5,
+				"showtext": "false",
+				"cntList": [
+					{
+						"value": 4,
+						"min": 0,
+						"max": 99999999,
+						"step": 1
+					}
+				],
+				"format": "228221689205"
+			},
+			{
+				"type": "barcode",
+				"version": 1,
+				"bctype": "ean8",
+				"bcoption": "includetext guardwhitespace height=0.5",
+				"width": "1",
+				"height": "50",
+				"angle": "0deg",
+				"x": 491,
+				"y": 51.5,
+				"showtext": "false",
+				"cntList": [
+					{
+						"value": 4,
+						"min": 0,
+						"max": 99999999,
+						"step": 1
+					}
+				],
+				"format": "228221689205"
+			},
+			{
+				"type": "barcode",
+				"version": 1,
+				"bctype": "ean8",
+				"bcoption": "includetext guardwhitespace height=0.5",
+				"width": "1",
+				"height": "50",
+				"angle": "0deg",
+				"x": 493,
+				"y": 164.5,
+				"showtext": "false",
+				"cntList": [
+					{
+						"value": 4,
+						"min": 0,
+						"max": 99999999,
+						"step": 1
+					}
+				],
+				"format": "228221689205"
+			}
+		],
+		"AttendeeEmail": "rd@anser-u2.com"
+	}
+}

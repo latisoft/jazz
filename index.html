@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = 'utf-8' />
+		
+		<script src="./jq-ui-1.10.3.custom/js/jquery-1.9.1.js"></script>
+		<script src="./jq-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
+		<link rel="stylesheet" href="./jq-ui-1.10.3.custom/css/pepper-grinder/jquery-ui-1.10.3.custom.css"/>
+
+<!--		<script src="plugin/filetree/jqueryFileTree.js"></script> -->
+		<script src="./plugin/html2canvas.js"></script> 
+
+<!--		<link rel="stylesheet" href="plugin/filetree/jqueryFileTree.css"/> -->
+		
+		<!-- Initial library path for barcode -->		
+		<script>	var libBarcodeDirectory = 'plugin/barcode/';</script>
+		<script src="./plugin/barcode/bwip.js"></script>
+		<script src="./plugin/barcode/lib/symdesc.js"></script>
+		<script src="./plugin/barcode/lib/needyoffset.js"></script>
+		<script src="./plugin/barcode/lib/canvas.js"></script>	
+		<script src="./plugin/jazz/message-parser.js"></script>
+		
+
+		<script src="js/setup-init.js"></script>
+		<script>
+			var objSettings;
+	
+			var initSetupFunctions = {
+
+				"text": initSetupText,
+				"datetime": initSetupDatetime,
+				"expire": initSetupExpire,
+				"counter": initSetupCounter,
+				"shift": initSetupShift,
+				"logo": initSetupLogo,
+				"barcode": initSetupBarcode,
+				"string": initSetupString
+			};
+			
+			var parseFunctions = {
+
+				"text": parseText,
+				"datetime": parseExpire,
+				"expire": parseExpire,
+				"counter": parseCounter,
+				"shift": parseShift,
+				"logo": parseLogo,
+				"barcode": parseBarcode,
+				"string": parseString
+			};
+			
+
+		</script> 		
+		<script src="js/obj-control.js"></script>		
+		<script src="js/init.js"></script>	
+		<link rel="stylesheet" href="css/style.css"/>
+		
+
+	</head>
+	<body>
+	<!--
+		<div id="dlgList" title="Select Message">
+			<div id='jqFileTree' class='div-ftree' ></div>
+		</div>
+	-->
+		<ul id="objPropertyContextMenu">
+			<li><a href="#">Modify</a></li>
+			<li><a href="#">Delete</a></li>
+			<li><a href="#">Clone</a></li>
+		</ul>
+		
+		<ul id="typeListContextMenu">
+			<li><a href="#">Text</a></li>
+			<li><a href="#">Datetime</a></li>
+			<li><a href="#">Expire</a></li>
+			<li><a href="#">Counter</a></li>
+			<li><a href="#">Shift</a></li>
+			<li><a href="#">Logo</a></li>
+			<li><a href="#">Barcode</a></li>
+			<li><a href="#">String</a></li>
+		</ul>
+		
+		
+		<div id = 'mainDiv'>
+			<h2 align='center'>Message Editor
+				<a href="" style='float:right; margin: 2px'>
+					<img src="./images/app-exit-24.png"/>
+				</a>
+			</h2>
+			<div id='workSpace'><div id='limitbox'></div></div>
+
+			
+			<div id='workFunction'>
+				<fieldset>
+		
+					<legend>Information</legend>
+					<table>
+					<tr>
+						<td>Message</td>
+						<td><input id='txtMessage' type='text' value='----' readonly size="10"/></td>
+						<td>
+						<!-- <button id='btnLoad'>Load</button> -->
+							<input type="file" id="files" name="files[]"/>
+							<!-- <output id="list"></output> -->
+						</td>
+					</tr>
+					<tr>
+						<td>Comment</td>
+						<td><input id='txtComment' type='text' value='JAZZ Format' readonly size="10"/></td>
+						<td><button id='btnSave'>Save</button></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					</tr>
+						<td>X:Y</td>
+						<td><div id='divXY' style='border: 1px solid yellow; width: 50px'>---:---<div></td>
+						<td><button id='btnBackground'>Clean</button></td>
+					</tr>
+					</table>	
+				</fieldset>
+				<fieldset>
+					<legend>New Object</legend>
+					<table>
+						<tr>
+							<td><button id='btnNewText'>TXT</button></td>
+							<td><button id='btnNewDatetime'>DTM</button></td>
+							<td><button id='btnNewExpire'>EXP</button></td>
+							<td><button id='btnNewCounter'>CNT</button></td>							
+						</tr>
+						<tr>
+							<td><button id='btnNewShift'>SFT</button></td>
+							<td><button id='btnNewLogo'>LOG</button></td>
+							<td><button id='btnNewBarcode'>BAR</button></td>
+							<td><button id='btnNewString'>STR</button></td>							
+						</tr>
+						<!--
+						<tr>
+							<td>
+								<input id='inputType' type='text' style='width: 60px' value='-' readonly></input>
+							</td>
+							<td rowspan="4" id="tdSetup"></td>
+						</tr>
+						<tr>	<td><button id='btnNewObject' style="float:right">Add</button></td></tr>
+						<tr>	<td><button id='btnSaveObject' style="float:right">Save</button></td></tr>
+						<tr>	<td><button id='btnResetObject' style="float:right">Reset</button></td></tr>
+						-->
+						
+						
+					</table>
+				</fieldset>
+				
+				<fieldset>
+					<legend>Message and Object</legend>
+					<table>
+						<tr>
+							<td>Objects</td>
+							<td>
+								<select id="sltObjNumber" style="width: 70px">
+									<option value="all">ALL: 0</option>
+									<option value="txt">TXT: 0</option>
+									<option value="dtm">DTM: 0</option>
+									<option value="exp">EXP: 0</option>
+									<option value="cnt">CNT: 0</option>
+									<option value="sft">SFT: 0</option>
+									<option value="log">LOG: 0</option>
+									<option value="bar">BAR: 0</option>
+									<option value="str">STR: 0</option>
+								</select>
+							</td>
+							
+							<td>Type</td>
+							<td><input id='txtType' type='text' value='Text' readonly size="8"/></td>
+						</tr>
+						<tr>
+							<td>W:H</td>
+							<td><input id='txtWH' type='text' value='270:40' readonly size="8"/></td>
+							<td>W:H,A</td>
+							<td><input id='txtWHA' type='text' value='96:128, 90' readonly size="8"/></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td>Position</td>
+							<td><input id='txtPosition' type='text' value='27:05' readonly size="8"/></td>
+						</tr>
+						<tr>
+							<td>Detail</td>
+							<td colspan="3"><input id='txtDetail' type='text' value='Hello' readonly size="31"/></td>
+						</tr>
+					</table>
+				</fieldset>
+			</div>
+			<div id="footer">Copyright © www.navibator.com 0.2.0</div>
+		</div>
+
+		<pre id="debug">x:y</pre>
+		
+<!-- Dialog Modify for All Object Types -->
+		<div id="dlg-modify-text" title="Modify Text">
+			<div>Text Modify Table</div>
+		</div>
+
+		<div id="dlg-modify-datetime" title="Modify Datetime">
+			<div>Datetime Modify Table</div>
+		</div>
+
+		<div id="dlg-modify-expire" title="Modify Expire">
+			<div>Expire Modify Table</div>
+		</div>
+
+		<div id="dlg-modify-counter" title="Modify Counter">
+			<div>Counter Modify Table</div>
+		</div>
+
+		<div id="dlg-modify-shift" title="Modify Shift">
+			<div>Shift Modify Table</div>
+		</div>
+
+		<div id="dlg-modify-logo" title="Modify Logo">
+			<div>Logo Modify Table</div>
+		</div>		
+
+		<div id="dlg-modify-barcode" title="Modify Barcode">
+			<div>Barcode Modify Table</div>
+		</div>
+
+		<div id="dlg-modify-string" title="Modify String">
+			<div>String Modify Table</div>
+		</div>		
+<!-- Dialog Modify for All Object Types -->		
+		
+		
+	</body>
+</html>
