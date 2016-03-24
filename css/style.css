@@ -103,11 +103,11 @@ fieldset {
 	width: 200px;
 }
 fieldset:nth-child(2) {
-	width: 200px;
+	width: 240px;
 }
 fieldset:nth-child(3) {
 	margin-right: 2px;
-	width: 230px;
+	width: 240px;
 }
 
 #limitbox {

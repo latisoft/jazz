@@ -48,7 +48,8 @@ $('#btnSave').on('click', function(e) {
 	  
 function selectTreeAt(file) { 
 
-	currentMessageFile = "appMessageEditor/" + file;
+	debugger
+	currentMessageFile = "jazz/" + file;
 	var fileNameIndex = file.lastIndexOf("/") + 1;
 	var filename = file.substr(fileNameIndex);
 	var fileExtIndex = file.lastIndexOf(".") + 1;
@@ -146,7 +147,7 @@ $(document).ready( function() {
 	//	
 	loadObjSettings();
 
-	document.getElementById('files').addEventListener('change', handleFileSelect, false);
+//	document.getElementById('files').addEventListener('change', handleFileSelect, false);
 	
 	// Initial Barcode and Sort the symbols
 	symdesc.pop();	// remove the null last entry
@@ -218,10 +219,10 @@ $(document).ready( function() {
 		$("#objPropertyContextMenu").fadeOut();
 	});
 		
-/*		
+
 	$('#jqFileTree')
 	.fileTree({	
-		root: '../../msg/', 
+		root: '../msg/', 
 		script: 'php/router.php', // jqueryFileTree.php
 		action: 'showFileTree',
 		folderEvent: 'click',
@@ -232,7 +233,7 @@ $(document).ready( function() {
 		collapseEasing: 'easeOutBounce',
 		loadMessage: 'Un momento...'},
 		selectTreeAt);
-*/
+
 	$("#dlgList")
 	.dialog({
 		autoOpen: false,
