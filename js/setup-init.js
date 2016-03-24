@@ -88,7 +88,7 @@ function saveSetupPages() {
 	txt.size = $('#setup-txt-size').val();
 	txt.angle= $('#setup-txt-angle').val();
 
-	/*
+	
 	var dtm = objSettings.contents["datetime"];
 	dtm.format = $('#setup-dtm-format').val();
 	dtm.font	= $('#setup-dtm-font').val();
@@ -101,7 +101,7 @@ function saveSetupPages() {
 	exp.size	= $('#setup-exp-size').val();
 	exp.angle= $('#setup-exp-angle').val() + "deg";
 	exp.days = $('#setup-exp-days').val();
-	*/
+	
 	
 	
 	

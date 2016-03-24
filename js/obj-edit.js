@@ -34,7 +34,7 @@ var alerts = [
 
 alerts.push({num : 3, app:'helloagain_again',message:'yet another message'});
 
-/*
+
 // var obj = getObjectAt(125, 30);
 function getObjectAt(x,y) {
 
@@ -203,5 +203,5 @@ function initDrag() {
 	}
 
 }
-*/
+
 // End of file

@@ -126,7 +126,8 @@ function initModifyDialog()
 				}]
 		});
 	}	
-	// $(this).load("pageObjectModify.html dlg-modify-datetime");
+	// 
+	$(this).load("pageObjectModify.html dlg-modify-datetime");
 };
 
 function initPanelDialog()
@@ -141,8 +142,9 @@ $(document).ready( function() {
 	
 	initModifyDialog();
 	initPanelDialog();
-	
-//	loadObjSettings();
+
+	//	
+	loadObjSettings();
 
 	document.getElementById('files').addEventListener('change', handleFileSelect, false);
 	
@@ -270,12 +272,12 @@ $(document).ready( function() {
 	$('#btnResetObject').on('click', loadObjSettings);
 
 
-/*
+//
 	$('#btnLoad').on('click', function(e) {
 		$("#dlgList").dialog("open");
 		return false;
 	});
-*/
+
 
 
 

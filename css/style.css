@@ -93,7 +93,7 @@ fieldset {
 	display:block;
 
 	font-size: 14px;
-	height: 104px;
+	height: 120px;
 	background-color: #ffee66;
 	padding: 1px;
 	margin: 1px 1px; 
@@ -160,7 +160,7 @@ div[id^='setup'] {
 	background-color: #F8EAEE;
 	border: 1px solid gray;
 	width: 140px;
-	height: 84px;
+	height: 100px;
 	overflow-x: hidden;
 	overflow-y: auto;
 }
